@@ -5,8 +5,13 @@
   # - name: update distribution
   #   apt:
   #     update_cache: yes
-  - name: install apache2
-    apt:
-      name:
-        - apache2
-      update_cache: yes
+  # - name: install apache2
+  #   apt:
+  #     name:
+  #       - apache2
+  #     update_cache: yes
+    - name: file html
+      copy:
+        src: html/
+        dest: /var/www/html 
+
